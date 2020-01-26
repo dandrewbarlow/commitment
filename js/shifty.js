@@ -4,6 +4,7 @@ var delta = 1;
 var left;
 for (var i = 0; i < p_array.length; i++) {
   left[i] = Math.random() * 100;
+  p_array[i].style.left = left[i] + "%";
 }
 
 function shifty() {
@@ -12,7 +13,7 @@ function shifty() {
     delta = -delta;
   }
   for (var i = 0; i < p_array.length; i++) {
-    p_array[i].style.left += delta;
+    p_array[i].style.left = delta + "%";
   }
 
 }
