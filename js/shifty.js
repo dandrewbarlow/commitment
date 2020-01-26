@@ -1,12 +1,12 @@
 var p_array;
 p_array = document.getElementsByClassName("body");
 var delta = 1;
-var left[p_array.length];
-for (int i = 0; i < p_array.length; i++) {
+var left;
+for (var i = 0; i < p_array.length; i++) {
   left[i] = Math.random() * 100;
 }
 
-while (1) {
+function shifty() {
 
   if (left >= 100 | left <= 0) {
     delta = -delta;
@@ -16,3 +16,5 @@ while (1) {
   }
 
 }
+
+setInterval(shifty, 1000);
