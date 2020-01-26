@@ -17,4 +17,4 @@ function shifty() {
 
 }
 
-setInterval(shifty, 1000);
+window.setInterval(shifty, 1000);
