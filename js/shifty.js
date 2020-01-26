@@ -1,12 +1,18 @@
-var elements;
-shiftVal = document.getElementsByClassName("body").style.left;
+var p_array;
+p_array = document.getElementsByClassName("body");
+var delta = 1;
+var left[p_array.length];
+for (int i = 0; i < p_array.length; i++) {
+  left[i] = Math.random() * 100;
+}
 
 while (1) {
-  var left = 0;
-  var delta = 1;
-  elements = left;
+
   if (left >= 100 | left <= 0) {
     delta = -delta;
   }
-  left += delta;
+  for (var i = 0; i < p_array.length; i++) {
+    p_array[i].style.left += delta;
+  }
+
 }
