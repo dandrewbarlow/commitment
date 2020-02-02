@@ -5,6 +5,8 @@ html {
 main {
   border-radius: 50%;
   border-style: dotted;
+  color:white;
+  font-family: sans-serif;
 
 }
 p {
