@@ -9,13 +9,15 @@ for (var i = 0; i < p_array.length; i++) {
 
 function shifty() {
 
-  if (left >= 100 | left <= 0) {
-    delta = -delta;
-  }
+
   for (var i = 0; i < p_array.length; i++) {
     p_array[i].style.left = delta + "%";
+
+    if (left >= 100 | left <= 0) {
+      delta = -delta;
+    }
   }
 
 }
 
-window.setInterval(shifty, 1000);
+window.setInterval(shifty, 10);
