@@ -75,7 +75,8 @@ var color2 = 0x800080;
 var delta1 = 1;
 var delta2 = 1;
 var background = document.getElementById("html");
-var bgString = "linear-gradient(to bottom right, ";
+var bgString = "linear-gradient(to bottom right, #";
+
 function backgroundShift() {
   //detect overflow
   if (color1 > 0xFFFFFE | color1 < 1) {
@@ -96,8 +97,10 @@ function backgroundShift() {
       color2 = 1;
     }
   }
+  color1 += delta1;
+  color2 += delta2;
 
-    background.style.backgroundImage = bgString + color1.toString(16) + "," + color2.toString(16) + ")";
+    background.style.backgroundImage = bgString + color1.toString(16) + ", #" + color2.toString(16) + ")";
 
 }
 
