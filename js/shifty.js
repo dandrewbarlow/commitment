@@ -18,6 +18,7 @@ function shifty() {
   //step through and set colors
   for (var i = 0; i < sections.length; i++) {
 
+    //detect color overflow
     if (color >= 16777215 | color <= 0) {
       toggle = !toggle;
       //edge case detection & correction
