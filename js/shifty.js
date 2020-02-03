@@ -7,7 +7,7 @@
 function shifty() {
   var sections = document.getElementsByClassName("body");
   for (var i = 0; i < sections.length; i++) {
-    sections[i].style.gridRow = Math.random() % 5;
+    sections[i].style.gridColumn = Math.random() % 5;
   }
 
 
@@ -17,6 +17,7 @@ function shifty() {
 //borderShift INIT
 var shrink = true;
 var radius = 50;
+
 function borderShift() {
   //main
   var main = document.getElementById("main");
@@ -30,8 +31,7 @@ function borderShift() {
   if (shrink) {
     radius -= 1;
     main.style.borderRadius = radius + "%";
-  }
-  else {
+  } else {
     radius += 1;
     main.style.borderRadius = radius + "%";
   }
