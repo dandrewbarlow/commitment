@@ -5,6 +5,9 @@ p_array = document.getElementsByClassName("body");
 var delta = 1;
 var left;
 
+var shrink = true;
+var radius = 50;
+
 //init array of random values, set it to left vals of
 //body paragraphs
 for (var i = 0; i < p_array.length; i++) {
@@ -26,7 +29,23 @@ function shifty() {
 }
 
 function borderShift() {
+  //main
+  var main = document.getElementById("main");
+
+  if (radius > 50 | radius < 10) {
+    shrink = !shrink;
+  }
+
+  if (shrink) {
+    radius -= 1;
+    main.style.borderRadius = radius + "%";
+  }
+  else {
+    radius += 1;
+    main.style.borderRadius = radius + "%";
+  }
+
 
 }
 
-window.setInterval(shifty, 10);
+window.setInterval(borderShift, 10);
