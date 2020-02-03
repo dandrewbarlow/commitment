@@ -87,7 +87,7 @@ function backgroundShift() {
 
   }
 
-    document.style.backgroundImage = bgString + color1 + "," + color2 + ")";
+    document.style.backgroundImage = bgString + color1.toString(16) + "," + color2toString(16) + ")";
 
 }
 
