@@ -6,27 +6,28 @@
 //get array of all sections
 var sections = document.getElementsByClassName("body");
 //set random color vals
-var color = (Math.random() * 0xFFFFFF) % 0xFFFFFF;
+var color = 0xFFFFFF;//Math.random()*0xFFFFFF<<0;
 
 var toggle = true;
-
+var ticker = 0;
 
 
 function shifty() {
+  ticker += 1;
 
   //step through and set colors
   for (var i = 0; i < sections.length; i++) {
 
-    if (color >= 0xFFFFFF | color <= 0) {
+    if (color >= 16777215 | color <= 0) {
       toggle = !toggle;
     }
 
     if (toggle) {
-      color += 1;
-    } else {
-      color -= 1;
+      color += 0x020503;
+    } else if (!toggle){
+      color -= 0x020503;
     }
-    sections[i].style.color = '#' + color;
+    sections[i].style.color = '#' + color.toString(16);
   }
 
 
