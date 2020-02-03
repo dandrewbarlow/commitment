@@ -23,9 +23,9 @@ function shifty() {
     }
 
     if (toggle) {
-      color += 0x020503;
+      color += 0x020303;
     } else if (!toggle){
-      color -= 0x020503;
+      color -= 0x020303;
     }
     sections[i].style.color = '#' + color.toString(16);
   }
@@ -60,4 +60,4 @@ function borderShift() {
 }
 
 window.setInterval(borderShift, 10);
-window.setInterval(shifty, 10);
+window.setInterval(shifty, 100);
