@@ -29,10 +29,10 @@ section {
   grid-column: 2 / 5;
   grid-row: auto;
   font-family: sans-serif;
-  color: white;
+
 }
 table {
-  margin: 0 auto
+  margin: 0 auto;
   border: 1px solid green;
   padding: 15px;
   border-spacing: 15px;

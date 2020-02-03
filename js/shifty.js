@@ -59,5 +59,5 @@ function borderShift() {
 
 }
 
-window.setInterval(borderShift, 10);
+window.setInterval(borderShift, 50);
 window.setInterval(shifty, 100);
