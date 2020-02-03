@@ -22,18 +22,18 @@ function shifty() {
       toggle = !toggle;
       //edge case detection & correction
       if (color >= 16777215) {
-        color = 16777210
+        color = 16777210;
       }
       if (color <= 0) {
-        color = 5
+        color = 5;
       }
 
     }
 
     if (toggle) {
-      color += 0x060701;
+      color += Math.random()*0xFFFFFF<<0;
     } else if (!toggle){
-      color -= 0x030105;
+      color -= Math.random()*0xFFFFFF<<0;
     }
     sections[i].style.color = '#' + color.toString(16);
   }
@@ -68,4 +68,4 @@ function borderShift() {
 }
 
 window.setInterval(borderShift, 50);
-window.setInterval(shifty, 10);
+window.setInterval(shifty, 100);
