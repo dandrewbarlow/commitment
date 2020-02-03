@@ -80,11 +80,21 @@ function backgroundShift() {
   //detect overflow
   if (color1 > 0xFFFFFE | color1 < 1) {
     delta1 = -delta1;
-
+    if (color1 > 0xFFFFFE) {
+      color1 = 0xFFFFFE;
+    }
+    if (color1 < 1) {
+      color1 = 1;
+    }
   }
   if (color2 > 0xFFFFFE | color2 < 1) {
     delta2 = -delta2;
-
+    if (color2 > 0xFFFFFE) {
+      color2 = 0xFFFFFE;
+    }
+    if (color2 < 1) {
+      color2 = 1;
+    }
   }
 
     document.style.backgroundImage = bgString + color1.toString(16) + "," + color2toString(16) + ")";
