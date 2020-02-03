@@ -6,26 +6,25 @@
 //get array of all sections
 var sections = document.getElementsByClassName("body");
 //set random color vals
-var color;
-var toggle;
-for (var i = 0; i < sections.length; i++) {
-  color[i] = (Math.random()*0xFFFFFF<<0).toString(16);
-  toggle[i] = true;
-}
+var color = (Math.random() * 0xFFFFFF) % 0xFFFFFF;
+
+var toggle = true;
+
 
 
 function shifty() {
 
   //step through and set colors
   for (var i = 0; i < sections.length; i++) {
-    if (color[i] >= 0xFFFFFF | color[i] <= 0) {
-      toggle[i] = !toggle[i];
+
+    if (color >= 0xFFFFFF | color <= 0) {
+      toggle = !toggle;
     }
-    if (toggle[i]) {
-      color[i] += 1;
-    }
-    else {
-      color[i] -= 1;
+
+    if (toggle) {
+      color += 1;
+    } else {
+      color -= 1;
     }
     sections[i].style.color = '#' + color;
   }
