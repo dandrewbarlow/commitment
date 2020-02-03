@@ -3,11 +3,31 @@
 
 //shifty INIT
 
+//get array of all sections
+var sections = document.getElementsByClassName("body");
+//set random color vals
+var color;
+var toggle;
+for (var i = 0; i < sections.length; i++) {
+  color[i] = (Math.random()*0xFFFFFF<<0).toString(16);
+  toggle[i] = true;
+}
+
 
 function shifty() {
-  var sections = document.getElementsByClassName("body");
+
+  //step through and set colors
   for (var i = 0; i < sections.length; i++) {
-    sections[i].style.gridColumn = Math.random() % 5;
+    if (color[i] >= 0xFFFFFF | color[i] <= 0) {
+      toggle[i] = !toggle[i];
+    }
+    if (toggle[i]) {
+      color[i] += 1;
+    }
+    else {
+      color[i] -= 1;
+    }
+    sections[i].style.color = '#' + color;
   }
 
 
