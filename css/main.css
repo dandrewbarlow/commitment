@@ -22,8 +22,8 @@ main {
 
 }
 header {
-  text-align: justify;
-  grid-column: 3;
+  text-align: center;
+  grid-column: 2 / 5;
 }
 section {
   grid-column: 2 / 5;
