@@ -97,7 +97,7 @@ function backgroundShift() {
     }
   }
 
-    document.style.backgroundImage = bgString + color1.toString(16) + "," + color2toString(16) + ")";
+    background.style.backgroundImage = bgString + color1.toString(16) + "," + color2.toString(16) + ")";
 
 }
 
@@ -106,4 +106,4 @@ function backgroundShift() {
 window.setInterval(borderShift, 50);
 window.setInterval(shifty, 100);
 
-window.setInterval(bgShift, 100);
+window.setInterval(backgroundShift, 100);
