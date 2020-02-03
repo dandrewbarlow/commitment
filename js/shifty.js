@@ -32,10 +32,12 @@ function borderShift() {
   //main
   var main = document.getElementById("main");
 
+  //check border size, if too big or small switch direction
   if (radius > 50 | radius < 10) {
     shrink = !shrink;
   }
 
+  //change the border size based on them sizes
   if (shrink) {
     radius -= 1;
     main.style.borderRadius = radius + "%";
