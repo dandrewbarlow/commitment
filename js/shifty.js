@@ -1,33 +1,22 @@
+//Andrew Barlow
 
-var p_array;
-p_array = document.getElementsByClassName("body");
 
-var delta = 1;
-var left;
+//shifty INIT
 
-var shrink = true;
-var radius = 50;
-
-//init array of random values, set it to left vals of
-//body paragraphs
-for (var i = 0; i < p_array.length; i++) {
-  left[i] = Math.random() * 100;
-  p_array[i].style.left = left[i] + "%";
-}
 
 function shifty() {
-
-
-  for (var i = 0; i < p_array.length; i++) {
-    p_array[i].style.left = delta + "%";
-
-    if (p_array[i].style.left >= 100 | p_array[i].style.left <= 0) {
-      delta = -delta;
-    }
+  var sections = document.getElementsByClassName("body");
+  for (var i = 0; i < sections.length; i++) {
+    sections[i].style.gridRow = Math.random() % 5;
   }
+
 
 }
 
+
+//borderShift INIT
+var shrink = true;
+var radius = 50;
 function borderShift() {
   //main
   var main = document.getElementById("main");
@@ -51,3 +40,4 @@ function borderShift() {
 }
 
 window.setInterval(borderShift, 10);
+window.setInterval(shifty, 10);
