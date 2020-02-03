@@ -69,9 +69,31 @@ function borderShift() {
 }
 
 
+//backgroundShift INIT
+var color1 = 0x0000FF;
+var color2 = 0x800080;
+var delta1 = 1;
+var delta2 = 1;
+var background = document.getElementById("html");
+var bgString = "linear-gradient(to bottom right, ";
+function backgroundShift() {
+  //detect overflow
+  if (color1 > 0xFFFFFE | color1 < 1) {
+    delta1 = -delta1;
 
+  }
+  if (color2 > 0xFFFFFE | color2 < 1) {
+    delta2 = -delta2;
+
+  }
+
+    document.style.backgroundImage = bgString + color1 + "," + color2 + ")";
+
+}
 
 
 //EXECUTE
 window.setInterval(borderShift, 50);
 window.setInterval(shifty, 100);
+
+window.setInterval(bgShift, 100);
