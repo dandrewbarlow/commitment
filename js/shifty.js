@@ -6,7 +6,7 @@
 //get array of all sections
 var sections = document.getElementsByClassName("body");
 //set random color vals
-var color = 0xFFFFFF;//Math.random()*0xFFFFFF<<0;
+var color = 0xFFFFFF; //Math.random()*0xFFFFFF<<0;
 
 var toggle = true;
 var ticker = 0;
@@ -32,9 +32,9 @@ function shifty() {
     }
 
     if (toggle) {
-      color += Math.random()*0xFFFFFF<<0;
-    } else if (!toggle){
-      color -= Math.random()*0xFFFFFF<<0;
+      color += Math.random() * 0xFFFFFF << 0;
+    } else if (!toggle) {
+      color -= Math.random() * 0xFFFFFF << 0;
     }
     sections[i].style.color = '#' + color.toString(16);
   }
@@ -100,7 +100,7 @@ function backgroundShift() {
   color1 += delta1;
   color2 += delta2;
 
-    background.style.backgroundImage = bgString + color1.toString(16) + ", #" + color2.toString(16) + ")";
+  background.style.backgroundImage = bgString + color1.toString(16) + ", #" + color2.toString(16) + ")";
 
 }
 
