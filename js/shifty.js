@@ -107,6 +107,6 @@ function backgroundShift() {
 
 //EXECUTE
 window.setInterval(borderShift, 50);
-window.setInterval(shifty, 100);
+window.setInterval(shifty, 300);
 
 window.setInterval(backgroundShift, 100);
