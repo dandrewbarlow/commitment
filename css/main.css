@@ -44,3 +44,9 @@ img {
 }
 
 /* VIEWPORT STUFF */
+@media only screen and (max-width: 480px) {
+  #main {
+    display:block;
+  }
+
+}
