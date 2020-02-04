@@ -17,6 +17,9 @@ main {
   font-family: sans-serif;
   text-align: center;
 }
+::selection {
+  background: #c8bb0a;
+}
 
 header {
   text-align: center;
