@@ -5,6 +5,10 @@ html {
 
 }
 
+li {
+  list-style: none;
+}
+
 #main {
   border-radius: 50%;
   border-style: groove;
