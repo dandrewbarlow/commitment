@@ -7,6 +7,7 @@ html {
 
 li {
   list-style: none;
+  font-family: sans-serif;
 }
 
 #main {
